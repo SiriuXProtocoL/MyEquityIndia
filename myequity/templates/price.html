@@ -1,0 +1,234 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %} Price {% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<form class="d-flex" action="{% url 'price' %}" method='POST'>
+    {% csrf_token %}
+    <input class="form-control me-2" name="ticker" type="search" placeholder="Add Symbol" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Add Stock</button>
+  </form>
+{% for i in output %}
+{{ i.symbol }}
+{% endfor %}
+
+    <div class="price-grid section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-btc">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc BTC"></i>
+                                    <span>{{ output.output.symbol }}</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-eth">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc ETH"></i>
+                                    <span>Ethereum</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart2"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-usdt">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc USDT"></i>
+                                    <span>Tether</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart3"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-xrp">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc XRP"></i>
+                                    <span>Ripple</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart4"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-ltc">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc LTC"></i>
+                                    <span>Litecoin</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart5"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-ada">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc ADA"></i>
+                                    <span>Cardano</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart6"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-eos">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc EOS"></i>
+                                    <span>EOS</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart7"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-xmr">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc XMR"></i>
+                                    <span>Monero</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart8"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget bg-xtz">
+                        <a href="{% url 'pricedetails' %}">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc XTZ"></i>
+                                    <span>Tezos</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart9"></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc XEM"></i>
+                                    <span>NEM</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart10"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc NEO"></i>
+                                    <span>NEO</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart11"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc DASH"></i>
+                                    <span>Dash</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart12"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc ETC"></i>
+                                    <span>Ethereum Classic</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart13"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc DGB"></i>
+                                    <span>DigiByte</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart14"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <div class="price-widget">
+                        <a href="price-details.html">
+                            <div class="price-content">
+                                <div class="icon-title">
+                                    <i class="cc DCR"></i>
+                                    <span>Decred</span>
+                                </div>
+                                <h5>$ 11,785.10</h5>
+                            </div>
+                            <div id="chart15"></div>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

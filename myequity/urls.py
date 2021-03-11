@@ -1,0 +1,31 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('about.html', views.about, name='about'),
+    path('accounts.html', views.accounts, name='accounts'),
+    path('app.html', views.app, name='app'),
+    path('blog.html', views.blogsingle, name='blog'),
+    path('blogsingle.html', views.blogsingle, name='blogsingle'),
+    path('career.html', views.career, name='career'),
+    path('contact.html', views.contact, name='contact'),
+    path('dashboard.html', views.dashboard, name='dashboard'),
+    path('faq.html', views.faq, name='faq'),
+    path('helpdesk.html', views.helpdesk, name='helpdesk'),
+    path('intro.html', views.intro, name='intro'),
+    path('lock.html', views.lock, name='lock'),
+    path('otp1.html', views.otp1, name='otp1'),
+    path('price.html', views.price, name='price'),
+    path('pricedetails.html', views.pricedetails, name='pricedetails'),
+    path('privacypolicy.html', views.privacypolicy, name='privacypolicy'),
+    path('profile.html', views.profile, name='profile'),
+    path('reset.html', views.reset, name='reset'),
+    path('settingsactivity.html', views.settingsactivity, name='settingsactivity'),
+    path('settingsprofile.html', views.settingsprofile, name='settingsprofile'),
+    path('signin.html', views.signin, name='signin'),
+    path('signup.html', views.signup, name='signup'),
+    path('team.html', views.team, name='team'),
+    path('trade.html', views.trade, name='trade'),
+    path('wallet.html', views.wallet, name='wallet'),
+]

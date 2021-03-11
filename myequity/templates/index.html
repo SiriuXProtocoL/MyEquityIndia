@@ -1,0 +1,476 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %} MyEquityIndia {% endblock %}
+
+{% block content %}
+
+    <div class="intro bg-primary">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-xl-12 col-lg-6 col-12">
+                <div class="intro-content">
+                    <h1 class="text-white">Invest on Equity with <strong class="text-white">MYEQUITYINDIA</strong>. <br> 
+                        Economic Analysis, Industry Analysis, Company Analysis and Management Analysis 
+                        
+                    </h1>
+                    <p class="text-white">Understand the Fundamentals and Technicals Before you Invest</p>
+
+                    <div class="intro-btn">
+                        <a href="#" class="btn btn-primary">Get Started</a>
+                        <a href="#" class="btn btn-outline-primary">Browse Now</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="shape"></div>
+</div>
+
+    <div class="getstart section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section-title">
+                    <h2>Get started in a few minutes</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-user-circle"></i></span>
+                    <h3>Create an account</h3>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-university"></i></span>
+                    <h3>Analyse the company</h3>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div class="getstart-content">
+                    <span><i class="fas fa-exchange-alt"></i></span>
+                    <h3>Start Investing</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="price-grid section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-btc">
+                    <a href="{% url 'pricedetails' %}">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc BTC"></i>
+                                <span>Kotak Bank</span>
+                            </div>
+                            <h5>Rs 1900.00</h5>
+                        </div>
+                        <div id="chart"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-eth">
+                    <a href="{% url 'pricedetails' %}">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc ETH"></i>
+                                <span>HDFC Bank</span>
+                            </div>
+                            <h5>Rs 1530.50</h5>
+                        </div>
+                        <div id="chart2"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-usdt">
+                    <a href="{% url 'pricedetails' %}">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc USDT"></i>
+                                <span>Axis Bank</span>
+                            </div>
+                            <h5>Rs 730.75</h5>
+                        </div>
+                        <div id="chart3"></div>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-dark">
+                    <a href="price-details.html">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc XRP"></i>
+                                <span>Ripple</span>
+                            </div>
+                            <h5>$ 11,785.10</h5>
+                        </div>
+                        <div id="chart4"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-dark">
+                    <a href="price-details.html">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc LTC"></i>
+                                <span>Litecoin</span>
+                            </div>
+                            <h5>$ 11,785.10</h5>
+                        </div>
+                        <div id="chart5"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div class="price-widget bg-dark">
+                    <a href="price-details.html">
+                        <div class="price-content">
+                            <div class="icon-title">
+                                <i class="cc ADA"></i>
+                                <span>Cardano</span>
+                            </div>
+                            <h5>$ 11,785.10</h5>
+                        </div>
+                        <div id="chart6"></div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+    <div class="portfolio section-padding bg-gradient-primary">
+    <div class="container">
+        <div class="row py-lg-5 justify-content-center">
+            <div class="col-xl-7">
+                <div class="section-title text-center">
+                    <h2 class="text-white">Create your Equity portfolio today</h2>
+                    <p class="text-white">MyEquityIndia has a variety of features that make it the best place to help you in managing your investments</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-4 col-lg-6">
+                <div class="portfolio_list">
+                    <div class="media">
+                        <span class="port-icon"> <i class="fas fa-user-circle"></i></span>
+                        <div class="media-body">
+                            <h4>Manage your portfolio</h4>
+                            <p>Keep track of the equity stock which you what to invest in the long run.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <span class="port-icon"> <i class="fas fa-shopping-bag"></i></span>
+                        <div class="media-body">
+                            <h4>Analyse Company Fundamentals</h4>
+                            <p>The Fundamentals analyse will help to choose the best company to invest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+                <div class="portfolio_img">
+                    <img src="{% static 'images/portfolio.png' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+                <div class="portfolio_list">
+                    <div class="media">
+                        <span class="port-icon"> <i class="fas fa-shield-virus"></i></span>
+                        <div class="media-body">
+                            <h4>Analyse Technical Indicators</h4>
+                            <p>Technical analysis helps you to identify when to invest (BUY) and when to exit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <span class="port-icon"> <i class="fas fa-mobile"></i></span>
+                        <div class="media-body">
+                            <h4>Develop & Learn with us</h4>
+                            <p>Join us by exploring <a href="#">Career</a> options and
+                                Learn what we do on
+                                <a href="#">Accademy</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="trade-app section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="section-title text-center">
+                    <h2>Trade. Anywhere</h2>
+                    <p> All of our products are ready to go, easy to use and offer great value to any kind of
+                        business
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="card trade-app-content">
+                    <div class="card-body">
+                        <span><i class="fas fa-mobile"></i></span>
+                        <h4 class="card-title">Mobile</h4>
+                        <p>All the power of MyEquityIndia in the palm of your hand. Download
+                            the
+                            MyEquityIndia mobile Investing Planner app today</p>
+
+                        <a href="#"> Know More </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="card trade-app-content">
+                    <div class="card-body">
+                        <span><i class="fas fa-desktop"></i></span>
+                        <h4 class="card-title">Desktop</h4>
+                        <p>Powerful Investment planning platform for those who mean business. The MyEquityIndia 
+                            investment
+                            experience is tailor-made for your Windows or MacOS device.</p>
+
+                        <a href="#"> Know More </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="card trade-app-content">
+                    <div class="card-body">
+                        <span><i class="fas fa-database"></i></span>
+                        <h4 class="card-title">API</h4>
+                        <p>The MyEquityIndia API is designed to provide an easy and efficient way to integrate your
+                            analysis 
+                             into our application.</p>
+
+                        <a href="#"> Know More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="brand  bg-light section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="trusted-business pb-5 text-center">
+                    <h3>Trusted by over  <strong>10,000 users</strong></h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/1.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/2.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/3.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/4.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/5.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="trusted-logo">
+                            <a href="#"><img class="img-fluid" src="{% static 'images/brand/5.svg' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    
+
+    <div class="appss section-padding">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-7 col-lg-6 col-md-6">
+                <div class="appss-content">
+                    <h2>Invest Wisely. Learn & Earn</h2>
+                    <ul>
+                        <li><i class="la la-check"></i> Economy Analysis</li>
+                        <li><i class="la la-check"></i> Industry Analysis</li>
+                        <li><i class="la la-check"></i> Company Analysis</li>
+                        <li><i class="la la-check"></i> Management Analysis</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-primary my-1 waves-effect">
+                            <img src="{% static 'images/android.svg' %}" alt="">
+                        </a>
+                        <a href="#" class="btn btn-primary my-1 waves-effect">
+                            <img src="{% static 'images/apple.svg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="appss-img">
+                    <img class="img-fluid" src="{% static 'images/app.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="blog bg-light section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="section-title text-center">
+                    <h2>Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <img class="img-fluid card-img-top" src="{% static 'images/blog/1.jpg' %}" alt="">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                                <h4 class="card-title">Intraday Trader? Be like a Smart Pineapple!</h4>
+                            </a>
+                            <p class="card-text">Day trading is risky. More the risk more the money. Know Yourself
+                                because with great power comes great responsibilities.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="{% static 'images/avatar/5.jpg' %}" alt=""> Admin</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 31 January, 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <img class="img-fluid card-img-top" src="{% static 'images/blog/2.jpg' %}" alt="">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                                <h4 class="card-title">How to Invest as a Short Term Investor</h4>
+                            </a>
+                            <p class="card-text">Best practise! start small first know what you are getting into and then get your hands dirty!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="{% static 'images/avatar/6.jpg' %}" alt=""> Admin</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 3 Feburary, 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="blog-grid">
+                    <div class="card">
+                        <img class="img-fluid card-img-top" src="{% static 'images/blog/3.jpg' %}" alt="">
+                        <div class="card-body">
+                            <a href="blog-single.html">
+                                <h4 class="card-title">Investment plans for the long Run</h4>
+                            </a>
+                            <p class="card-text">Choose your company wisely by analysis the fundamentals and technical. MyEquityIndia will help you with the process and you can plan your journy. Start now</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="meta-info">
+                                <a href="#" class="author"><img src="{% static 'images/avatar/7.jpg' %}" alt=""> Admin</a>
+                                <a href="#" class="post-date"><i class="la la-calendar"></i> 5 March, 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="get-touch section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="section-title">
+                    <h2>Get in touch. Stay in touch.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="get-touch-content">
+                    <span><i class="fas fa-headset"></i></span>
+                    <h4>24 / 7 Support</h4>
+                    <p>Got a problem? Just get in touch. Our support team is available 24/7.
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="get-touch-content">
+                    <span><i class="fas fa-blog"></i></span>
+                    <h4>MyEquityIndia Blog</h4>
+                    <p>News and updates for every company in your portfolio.
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="get-touch-content">
+                    <span><i class="fas fa-briefcase"></i></span>
+                    <h4>Careers</h4>
+                    <p>Help build the future of technology. Start your new career at MyEquityIndia.
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="get-touch-content">
+                    <span><i class="fas fa-users"></i></span>
+                    <h4>Community</h4>
+                    <p>Communicate and know the indian investment community through sMyEquityIndia.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+   
